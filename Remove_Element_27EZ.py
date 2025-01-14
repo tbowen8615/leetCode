@@ -7,18 +7,17 @@ The remaining elements of nums are not important as well as the size of nums.
 2) Return k
 """
 
-class Solution(object):
-    def removeElement(self, nums, val):
-    """
-    :type nums: List[int]
-    :type val: int
-    :rtype: int
-    """
+
+def removeElement(nums, val):
     k = 0 # Index to place the next non-val element
 
-        for i in range(len(nums)):
-            if nums[i] != val:
-                nums[k] = nums[i]
-                k += 1
-
+    for i in range(len(nums)):
+        if nums[i] != val:
+            nums[k] = nums[i]
+            k += 1
+    print(nums, k)
     return k
+
+nums = [3,2,2,3]
+val = 3
+removeElement(nums, val)
