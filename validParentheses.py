@@ -6,6 +6,7 @@ def isValid(s):
     for char in s:
         if char in '({[':
             stack.append(char)
+            print(stack)
         elif char in ')}]':
             if not stack or stack.pop() != brackets[char]:
                 print("Invalid string")
@@ -17,5 +18,5 @@ def isValid(s):
         print("Valid string")
     return True
 
-s = '(){}['
+s = '({[]})'
 isValid(s)
