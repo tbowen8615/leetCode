@@ -1,17 +1,12 @@
 
 def majorityElement(nums):
-
     candidate = None
     count = 0
 
     for i in nums:
         if count == 0:
             candidate = i
-            count += 1
-        elif count != 0 and candidate == i:
-            count += 1
-        else:
-            count -= 1
+        count += (1 if candidate == i else -1)
     print(candidate, "is the majority element.")
     return candidate
 
