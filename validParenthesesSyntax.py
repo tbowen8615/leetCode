@@ -1,0 +1,5 @@
+
+
+delimiters = {')': '(', '}': '{', ']': '['}
+
+print(delimiters[')'])
