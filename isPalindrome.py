@@ -1,10 +1,20 @@
 
 def isPalindrome(s):
-    new = ''
-    for char in s:
-        if char.isalnum():
-            new += char.lower()
+    cleaned = ''.join(char.lower() for char in s if char.isalnum())
 
-    return new == new[::-1]
+    # Use two pointers to check if it's a palindrome
+    left = 0
+    right = len(cleaned) - 1
 
-print(isPalindrome("amanaplanacanalpanama"))
+    while left < right:
+        if cleaned[left] != cleaned[right]:
+            print("False")
+            return False
+        left += 1
+        right -= 1
+
+    print("True")
+    return True
+
+s = "A man, a plan, a canal: Panama"
+isPalindrome(s)
