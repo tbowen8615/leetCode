@@ -1,11 +1,13 @@
 
 def isPalindrome(s):
+    # Set all characters to lowercase, remove non-alphanumeric characters, and join them together
     cleaned = ''.join(char.lower() for char in s if char.isalnum())
 
-    # Use two pointers to check if it's a palindrome
+    # Initialize two pointers one at the beginning of the string and one at the end
     left = 0
     right = len(cleaned) - 1
 
+    # while the left pointer is less than the right, check if the characters they point to are the same
     while left < right:
         if cleaned[left] != cleaned[right]:
             print("False")
