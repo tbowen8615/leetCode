@@ -2,7 +2,7 @@ def shortestToChar(s, c):
     # Helper function to recursively fill the answer array
     def fill_distances(index, c_positions, answer):
         if index == len(s):
-            return
+            return None
 
         # Find the closest distance to c
         min_distance = float('inf')
